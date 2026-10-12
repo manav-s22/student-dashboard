@@ -36,7 +36,7 @@ function Auth() {
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-sm bg-neutral-900/60 backdrop-blur-md border border-white/10 rounded-2xl p-8">
         <h1 className="text-2xl font-bold text-white text-center mb-1">
-          Student Dashboard
+          Student<span className="text-indigo-500">Dash</span>
         </h1>
         <p className="text-neutral-400 text-center text-sm mb-6">
           {isSignUp ? 'Create an account' : 'Welcome back'}
@@ -49,7 +49,7 @@ function Auth() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             required
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-neutral-500 outline-none focus:border-red-500"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-neutral-500 outline-none focus:border-indigo-500"
           />
           <input
             type="password"
@@ -58,7 +58,7 @@ function Auth() {
             placeholder="Password"
             required
             minLength={6}
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-neutral-500 outline-none focus:border-red-500"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-neutral-500 outline-none focus:border-indigo-500"
           />
 
           {error && <p className="text-red-400 text-sm">{error}</p>}
@@ -67,7 +67,7 @@ function Auth() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 disabled:opacity-50"
+            className="w-full py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50"
           >
             {loading ? 'Please wait...' : isSignUp ? 'Sign Up' : 'Log In'}
           </button>
@@ -81,7 +81,7 @@ function Auth() {
               setError(null)
               setMessage(null)
             }}
-            className="text-red-400 hover:underline"
+            className="text-indigo-400 hover:underline"
           >
             {isSignUp ? 'Log in' : 'Sign up'}
           </button>
